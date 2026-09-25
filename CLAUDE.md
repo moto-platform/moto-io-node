@@ -1,5 +1,7 @@
 # CLAUDE.md — moto-io-node
 
+@.claude/PLATFORM-RULES.md
+
 ## What this repo is
 
 A combined zone-controller firmware running on **STM32G0** (G0B1 class; prototype: the STM32F103 on hand). Three modules live on the same node, each separate under `src/features/`:
