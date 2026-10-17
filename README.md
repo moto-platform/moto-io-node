@@ -2,6 +2,8 @@
 
 Part of [moto-platform](https://github.com/moto-platform), an SDV-style diagnostics, telemetry and rider-assistance platform for motorcycles (first vehicle: Honda CL250).
 
+> **RETIRED by D-072 (2026-10-17).** There is no separate I/O node any more: blind spot and immobilizer moved to `moto-safety-node` (the Cortex-M4 safety partition of the STM32H755), power management and park mode to `moto-rt-core` (Cortex-M7). This repo holds no code and stays as it is until it is archived. The text below is the original plan, kept for reference.
+
 A combined zone-controller firmware running on **STM32G0** (G0B1 class; prototype: the STM32F103 on hand). Three modules live on the same node, each separate under `src/features/`:
 - `blind_spot/`: 2× 24 GHz radar → approach logic → mirror LEDs (green / solid red / blinking red). The decision is made entirely here; only the result is written to CAN.
 - `immobilizer/`: NFC (PN532) primary, handlebar PIN as backup → bistable relay.
